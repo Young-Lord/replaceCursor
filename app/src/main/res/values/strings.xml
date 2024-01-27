@@ -1,7 +1,7 @@
 <resources>
     <string name="project_url" translatable="false">https://github.com/Young-Lord/replaceCursor</string>
     <string name="app_name">Replace Cursor</string>
-    <string name="xposeddescription"> </string>
+    <string name="xposeddescription">Replace mouse cursor / touch indicator with a custom one</string>
     <string name="title_home">Home</string>
     <string name="title_settings">Settings</string>
     <string name="title_about">About</string>

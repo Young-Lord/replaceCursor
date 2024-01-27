@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">更改指针图标</string>
-    <string name="xposeddescription"> </string>
+    <string name="xposeddescription">自定义包括鼠标指针、触控点在内的各种图片资源</string>
     <string name="title_home">主页</string>
     <string name="title_settings">设置</string>
     <string name="title_about">关于</string>
