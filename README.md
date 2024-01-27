@@ -29,14 +29,15 @@ For example, use `ls -a *.ani | xargs -L1 ani2png` to convert all `.ani` files i
 
 From MIUI 13, Android 12.
 
-| Resource ID        | Desciption                                                                        | HotSpot  |
-|--------------------|-----------------------------------------------------------------------------------|----------|
-| pointer_spot_touch | Touch point                                                                       | (22, 22) |
-| pointer_arrow      | Mouse Pointer (Arrow)                                                             | (5, 5)   |
-| pointer_hand       | Mouse Pointer (Hand, for example when hover on sth. clickable)                    | (9, 4)   |
+| Resource ID        | Description                                                                     | HotSpot  |
+|--------------------|---------------------------------------------------------------------------------|----------|
+| pointer_spot_touch | Touch point                                                                     | (22, 22) |
+| pointer_arrow      | Mouse Pointer (Arrow)                                                           | (5, 5)   |
+| pointer_hand       | Mouse Pointer (Hand, for example when hover on sth. clickable)                  | (9, 4)   |
 | pointer_text       | Mouse Pointer (Looks like <code>&#124;</code>， for editing vertical text input) | (12, 12) |
 
-Please note that the images may be scaled, in my case `360x360` is good for phone.
+Please note that the images may be scaled. See [Android 加载 drawable 中图片后自动缩放的原理](https://juejin.cn/post/6844903914022633480) and [Android drawable微技巧，你所不知道的drawable的那些细节](https://blog.csdn.net/guolin_blog/article/details/50727753#:~:text=%E5%8F%AF%E4%BB%A5%E7%9C%8B%E5%88%B0%EF%BC%8C%E6%AF%8F%E4%B8%80%E7%A7%8D%E5%AF%86%E5%BA%A6%E7%9A%84dpi%E8%8C%83%E5%9B%B4%E9%83%BD%E6%9C%89%E4%B8%80%E4%B8%AA%E6%9C%80%E5%A4%A7%E5%80%BC%EF%BC%8C%E8%BF%99%E4%B8%AA%E6%9C%80%E5%A4%A7%E5%80%BC%E4%B9%8B%E9%97%B4%E7%9A%84%E6%AF%94%E4%BE%8B%E5%B0%B1%E6%98%AF%E5%9B%BE%E7%89%87%E4%BC%9A%E8%A2%AB%E7%B3%BB%E7%BB%9F%E8%87%AA%E5%8A%A8%E6%94%BE%E5%A4%A7%E7%9A%84%E6%AF%94%E4%BE%8B%E3%80%82) and [getResources().getDisplayMetrics().density 的理解
+](https://blog.csdn.net/lgzaaron/article/details/52517941) for more informaton. In my case, `360x360` on a `xhdpi` device becomes `135x135` (`360 * (240 / 320) / 2 = 135`, not sure). You may need to manually adjust size & padding (border) to fit size & hotspot.
 
 Mouse-related resource-id may have a `_large` suffix, used when `Accessibility` -> `Large mouse pointer`(`大号鼠标指针`) is enabled.
 
