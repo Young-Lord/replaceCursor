@@ -123,7 +123,7 @@ class PreferenceUtils( // init context on constructor
         // Log.e("PreferenceUtils", "getImageBinary: $filename")
         return getImageBinaryFrom(funcPref, filename)
     }
-      private fun removeImageBinary(filename: String) {
+      fun removeImageBinary(filename: String) {
         // Log.e("PreferenceUtils", "removeImageBinary: $filename")
         funcPref.edit().remove(imageBinaryPrefix+filename).apply()
     }

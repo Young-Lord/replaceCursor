@@ -105,6 +105,7 @@ private fun MainSettings(recomposeEntries: MutableState<Int>) {
                     )
                     // copy to data dir
                     val inputStream = activity.contentResolver.openInputStream(uri)!!
+                    if(resultFile.isNotEmpty()) preferenceUtils.removeImageBinary(resultFile)
                     resultFile = "${resourceId}_${System.currentTimeMillis()}"
                     preferenceUtils.setImageBinary(resultFile, inputStream.readBytes())
                     /*
