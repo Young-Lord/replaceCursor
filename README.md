@@ -64,3 +64,7 @@ Apache-2.0 License or MIT License are all OK.
 ## TODO
 
 Currently, this module use SharedPreferences to store images, which is really shitty. Anyone is free to improve this module.
+
+Also, I am too low to modify hotspot using Xposed. If you know how to do this, please tell me.
+
+Also: Origin image resolution, disable scaling.
