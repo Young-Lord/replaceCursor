@@ -39,12 +39,6 @@
                 <category android:name="de.robv.android.xposed.category.MODULE_SETTINGS"/>
             </intent-filter>
         </activity>
-        <provider
-            android:name="moe.lyniko.replacecursor.ImageProvider"
-            android:authorities="moe.lyniko.replacecursor.ImageProvider"
-            android:exported="true"
-            android:enabled="true"
-            android:directBootAware="true" />
     </application>
 
 </manifest>
