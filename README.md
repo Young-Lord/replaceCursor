@@ -20,6 +20,9 @@ See `magisk` folder for more information.
 
 For MiPad users, install [MaxMiPad](https://github.com/Xposed-Modules-Repo/com.yifeplayte.maxmipadinput/releases/latest) and enable `No Magic Pointer`.
 
+If you have Windows-style `.ani` cursors, you can use [ani2png](https://github.com/Mastermindzh/Scripts/blob/master/c%2B%2B/ani2png.c) to convert them.
+For example, use `ls -a *.ani | xargs -L1 ani2png` to convert all `.ani` files in current directory to `.png` files.
+
 ## Common resources / 常用资源
 
 From MIUI 13, Android 12.
@@ -50,6 +53,8 @@ Apache-2.0 License or MIT License are all OK.
 
 - <https://github.com/thesandipv/pointer_replacer> (doesn't work for me)
 - <https://github.com/hujiayucc/R-Pointer> (per-app configuration)
+- <https://github.com/quantum5/win2xcur> (convert `.cur` and `.ani` to Xcursor format, for Linux)
+- <https://github.com/eworm-de/xcur2png> (convert Xcursor format to `.png`, see pull requests for a better version)
 
 ## TODO
 
