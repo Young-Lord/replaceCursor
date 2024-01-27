@@ -93,9 +93,9 @@ class PreferenceUtils( // init context on constructor
         saveResourceHooks()
     }
 
-    fun removeResourceHook(resourceHook: ResourceHookEntry) {
+    fun removeResourceHook(resourceHook: ResourceHookEntry, keepImage: Boolean = false) {
         // Log.e("PreferenceUtils", "removeResourceHook: $resourceHook")
-        removeImageBinary(resourceHook.imageFile)
+        if (!keepImage) removeImageBinary(resourceHook.imageFile)
         resourceHooks = resourceHooks - resourceHook
         saveResourceHooks()
     }
@@ -107,12 +107,10 @@ class PreferenceUtils( // init context on constructor
     fun updateResourceHook(resourceHook: ResourceHookEntry) {
         // Log.e("PreferenceUtils", "updateResourceHook: $resourceHook")
         val oldResourceHook = getResourceHook(resourceHook.resourceId)
-        if (oldResourceHook == null) {
-            addResourceHook(resourceHook)
-        } else {
-            removeResourceHook(oldResourceHook)
-            addResourceHook(resourceHook)
+        if (oldResourceHook != null) {
+            removeResourceHook(oldResourceHook, keepImage = true)
         }
+        addResourceHook(resourceHook)
     }
     @SuppressLint("ApplySharedPref")
     fun setImageBinary(filename: String, data: ByteArray) {
