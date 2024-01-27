@@ -50,3 +50,7 @@ Apache-2.0 License or MIT License are all OK.
 
 - <https://github.com/thesandipv/pointer_replacer> (doesn't work for me)
 - <https://github.com/hujiayucc/R-Pointer> (per-app configuration)
+
+## TODO
+
+Currently, this module use SharedPreferences to store images, which is really shitty. Anyone is free to improve this module.
