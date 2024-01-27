@@ -10,7 +10,7 @@ See `magisk` folder for more information.
 
 ## How to use / 用法
 
-> Tested on: None
+> Tested on:  Android 10 (AOSP), Android 12 (MIUI 13)
 
 1. Select `System framework` (package name may be `android` or `system` or empty, [see this](https://github.com/LSPosed/LSPosed/releases/tag/v1.9.1)) in module scope and activate the module
 2. Force stop module
