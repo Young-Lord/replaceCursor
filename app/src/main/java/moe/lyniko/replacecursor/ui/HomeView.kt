@@ -45,6 +45,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import com.google.accompanist.drawablepainter.rememberDrawablePainter
 import moe.lyniko.replacecursor.BuildConfig
+import moe.lyniko.replacecursor.R
 import moe.lyniko.replacecursor.ui.theme.MyApplicationTheme
 import moe.lyniko.replacecursor.utils.PreferenceUtils
 import moe.lyniko.replacecursor.utils.ResourceHookEntry
@@ -134,7 +135,7 @@ private fun MainSettings(recomposeEntries: MutableState<Int>) {
         TextField(
             value = resourceId,
             onValueChange = { resourceId = it },
-            label = { Text(text = "Resource ID") },
+            label = { Text(text = LocalContext.current.getString(R.string.resource_id)) },
             modifier = Modifier.fillMaxWidth()
         )
         //3. display Button for image file, use SAF to select
@@ -151,7 +152,7 @@ private fun MainSettings(recomposeEntries: MutableState<Int>) {
                 }
                 startForResult.launch(intent)
             }) {
-                Text(text = "Select Image File")
+                Text(text = LocalContext.current.getString(R.string.select_image))
             }
             //4. display Button for add
             Button(
@@ -171,7 +172,7 @@ private fun MainSettings(recomposeEntries: MutableState<Int>) {
                     resultFile = ""
                     recomposeEntries.value += 1
                 }) {
-                Text(text = "Add")
+                Text(text = LocalContext.current.getString(R.string.add))
             }
         }
     }
