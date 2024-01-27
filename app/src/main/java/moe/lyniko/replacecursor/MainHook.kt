@@ -1,32 +1,19 @@
 package moe.lyniko.replacecursor
 
-import android.annotation.SuppressLint
-import android.app.AndroidAppHelper
-import android.content.ContentResolver
-import android.content.ContentUris
-import android.content.ContentValues
 import android.content.res.XResources
 import android.graphics.drawable.Drawable
-import android.net.Uri
-import android.util.Log
 import de.robv.android.xposed.IXposedHookZygoteInit
 import de.robv.android.xposed.IXposedHookZygoteInit.StartupParam
-import de.robv.android.xposed.SELinuxHelper
 import de.robv.android.xposed.XSharedPreferences
 import de.robv.android.xposed.XposedBridge
 import moe.lyniko.replacecursor.utils.PreferenceUtils
 import moe.lyniko.replacecursor.utils.ResourceHookEntry
-import java.io.File
 
 
 class MainHook : IXposedHookZygoteInit {
     private var hooks: List<ResourceHookEntry>
-    private var xsp: XSharedPreferences
-    @SuppressLint("SdCardPath")
-    private fun getFilePath(filename: String): String {
-        // sadly i don't know how to get context, so i have to use this
-        return "/data/data/${BuildConfig.APPLICATION_ID}/files/$filename"
-    }
+    private var xsp: XSharedPreferences =
+        XSharedPreferences(BuildConfig.APPLICATION_ID, PreferenceUtils.functionalConfigName)
 
     override fun initZygote(param: StartupParam) {
         hooks.forEach { hook ->
@@ -56,6 +43,27 @@ class MainHook : IXposedHookZygoteInit {
                         }
                     }
                 )
+                /*
+                Change cursor hotspot, not working.
+                val xml = """
+                    <pointer-icon xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:bitmap="@android:drawable/${hook.resourceId}"
+                        android:hotSpotX="0dp"
+                        android:hotSpotY="0dp" />
+                """.trimIndent()
+                val drawableIcon = xmlStringToDrawable(xml)
+                XResources.setSystemWideReplacement(
+                    "android",
+                    "drawable",
+                    hook.resourceId+"_icon",
+                    object : XResources.DrawableLoader() {
+                        override fun newDrawable(xModuleResources: XResources, s: Int): Drawable {
+                            XposedBridge.log("ReplaceCursor - drawableIcon for ${hook.resourceId}: $drawableIcon")
+                            return drawableIcon
+                        }
+                    }
+                )
+                */
             }
             catch (e: Exception) {
                 e.printStackTrace()
@@ -71,9 +79,15 @@ class MainHook : IXposedHookZygoteInit {
          */
     }
 
+    /*
+    private fun xmlStringToDrawable(yourString: String): Drawable{
+        val parser = Xml.newPullParser()
+        parser.setInput(StringReader(yourString))
+        return Drawable.createFromXml(MyApplication.resourcesPublic, parser)
+    }
+    */
+
     init {
-        xsp =
-            XSharedPreferences(BuildConfig.APPLICATION_ID, PreferenceUtils.functionalConfigName)
         xsp.makeWorldReadable()
         hooks = PreferenceUtils.getResourceHooksFrom(xsp)
     }
