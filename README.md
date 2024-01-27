@@ -8,11 +8,14 @@ Note: You can use Magisk + [RRO](https://source.android.com/docs/core/runtime/rr
 See `magisk` folder for more information.
 (be aware of SELinux context, btw.)
 
+![Demo picture, showing UI and example cursor](https://github.com/Young-Lord/replaceCursor/assets/51789698/416d64cc-f065-4b55-953a-6766c27e9f6a)
+
 ## How to use / 用法
 
 > Tested on:  Android 10 (AOSP), Android 12 (MIUI 13)
 
-1. Select `System framework` (package name may be `android` or `system` or empty, [see this](https://github.com/LSPosed/LSPosed/releases/tag/v1.9.1)) in module scope and activate the module
+1. S![Screenshot_2024-01-27-19-07-27-583-edit_moe lyniko replacecursor](https://github.com/Young-Lord/replaceCursor/assets/51789698/a2273eba-d74d-4de3-9b3b-2ffb4dc28274)
+elect `System framework` (package name may be `android` or `system` or empty, [see this](https://github.com/LSPosed/LSPosed/releases/tag/v1.9.1)) in module scope and activate the module
 2. Force stop module
 3. Add resources to change. Please make sure that image sizes are bigger than hotspot (cursor left-top corner / touch point), otherwise nothing will show.
 4. Reboot (you MUST reboot when you modify anything, or changes will not be applied until next reboot)
