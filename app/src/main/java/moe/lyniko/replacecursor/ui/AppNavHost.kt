@@ -35,7 +35,7 @@ fun BottomNavigation(
 ) {
     val items = listOf(
         NavigationItem.Home,
-        NavigationItem.Settings,
+        // NavigationItem.Settings,
         NavigationItem.About,
     )
 
