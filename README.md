@@ -60,6 +60,7 @@ Apache-2.0 License or MIT License are all OK.
 - <https://github.com/hujiayucc/R-Pointer> (per-app configuration)
 - <https://github.com/quantum5/win2xcur> (convert `.cur` and `.ani` to Xcursor format, for Linux)
 - <https://github.com/eworm-de/xcur2png> (convert Xcursor format to `.png`, see pull requests for a better version)
+- [将Windows上的鼠标指针主题移植到Linux上](https://blog.csdn.net/qq_41172785/article/details/89063164) (convert, edit, install Windows cursors to Linux)
 
 ## TODO
 
