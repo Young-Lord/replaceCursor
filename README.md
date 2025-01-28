@@ -25,6 +25,8 @@ For MiPad users, install [MaxMiPad](https://github.com/Xposed-Modules-Repo/com.y
 If you have Windows-style `.ani` cursors, you can use [ani2png](https://github.com/Mastermindzh/Scripts/blob/master/c%2B%2B/ani2png.c) to convert them.
 For example, use `ls -a *.ani | xargs -L1 ani2png` to convert all `.ani` files in current directory to `.png` files.
 
+Looking for equivalent on **Linux**? Check [Image2Cursors](https://github.com/Young-Lord/Image2Cursors)!
+
 ## Common resources / 常用资源
 
 From MIUI 13, Android 12.
