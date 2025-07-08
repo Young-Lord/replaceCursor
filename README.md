@@ -5,14 +5,13 @@ Replace mouse cursor with a custom one.
 自定义包括鼠标指针、触控点在内的各种图片资源。
 
 Note: You can use Magisk + [RRO](https://source.android.com/docs/core/runtime/rros) for better experience.
-See [`magisk` folder](https://github.com/Young-Lord/replaceCursor/tree/master/magisk) for more information.
-(be aware of SELinux context, btw.)
+See [`magisk` folder](https://github.com/Young-Lord/replaceCursor/tree/master/magisk) or releases for more information.
 
 ![Demo picture, showing UI and example cursor](https://github.com/Young-Lord/replaceCursor/assets/51789698/416d64cc-f065-4b55-953a-6766c27e9f6a)
 
 ## How to use / 用法
 
-> Tested on:  Android 10 (AOSP), Android 12 (MIUI 13)
+> Tested on:  Android 10 (AOSP), Android 12 (MIUI 13), Android 13 (MIUI 14)
 
 1. Select `System framework` (package name may be `android` or `system` or empty, [see this](https://github.com/LSPosed/LSPosed/releases/tag/v1.9.1)) in module scope and activate the module
 2. Force stop module
