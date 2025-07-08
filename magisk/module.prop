@@ -3,4 +3,4 @@ name=Replace Cursor
 version=v3
 versionCode=3
 author=LY
-description=Magisk Implementation of Replace Cursor. Originally from https://github.com/sandipv22/pointer_replacer .
+description=Customize cursor.
