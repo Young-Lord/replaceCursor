@@ -6,6 +6,7 @@ on:
     paths-ignore:
       - '.github/ISSUE_TEMPLATE/**'
       - '.github/workflows/issue.yml'
+      - 'magisk/**'
       - '**.md'
   workflow_dispatch:
 
